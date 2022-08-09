@@ -23,6 +23,9 @@ h1,h2,h3,h4,h5,h6{
     float: left;
     position: relative;
 }
+.master{
+    overflow-x: hidden;
+}
 
 .container{
     max-width: 1200px;
@@ -73,6 +76,9 @@ figure img{
     border-radius: 30px;
     -moz-border-radius: 30px;
     -webkit-border-radius: 30px;
+}
+.btn:hover{
+    cursor: pointer;
 }
 .btn-primary{
     background: var(--green);
@@ -133,6 +139,9 @@ header.scrolled::before{
     color: var(--green3);
 }
 
+.hero-slider .item img{
+    width: 100%;
+}
 .article{
     width: 100%;
     float: left;
@@ -275,7 +284,7 @@ hr{
 
 .videos{
     background: url(../images/divider-4.png) no-repeat center bottom;
-    background-size: contain;
+    background-size: cover;
     padding-bottom: 100px;
 }
 .v-shadow::after{
@@ -402,6 +411,113 @@ footer::after{
     display: none;
 }
 
+.overlay{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: 10;
+    transition: all ease-out 0.3s;
+    -moz-transition: all ease-out 0.3s;
+    -webkit-transition: all ease-out 0.3s;
+    opacity: 0;
+    pointer-events: none;
+}
+.overlay.show{
+    opacity: 1;
+    pointer-events: auto;
+}
+.popup{
+    width: calc(100% - 40px);
+    max-width: 996px;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    background: #fff;
+    transition: all ease-out 0.3s;
+    -moz-transition: all ease-out 0.3s;
+    -webkit-transition: all ease-out 0.3s;
+}
+.overlay.show .popup{
+    top: 50%;
+}
+.popup .pic{
+    width: 386px;
+    float: left;
+}
+.popup .pic img{
+    display: block;
+}
+.popup form{
+    width: calc(100% - 386px);
+    float: left;
+    padding: 40px 80px;
+}
+.popup form h3{
+    font-size: 32px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 30px;
+}
+.popup form .inp-group{
+    width: 100%;
+    float: left;
+    margin-bottom: 20px;
+}
+.popup form .inp-group label{
+    width: 100%;
+    float: left;
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 5px;
+}
+.popup form .inp-group input{
+    width: 100%;
+    float: left;
+    background: #fafafa;
+    border: none;
+    border-bottom: 1px solid #dedede;
+    font-size: 15px;
+    padding: 0 20px;
+    height: 50px;
+}
+.popup form .inp-group input:focus{
+    outline: none;
+    border-color: var(--green2);
+}
+.popup form .inp-group button{
+    font-weight: 700;
+}
+.close-bt{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    opacity: 0.5;
+    cursor: pointer;
+    transition: all ease-out 0.3s;
+    -moz-transition: all ease-out 0.3s;
+    -webkit-transition: all ease-out 0.3s;
+}
+.close-bt:hover{
+    opacity: 1;
+}
+
+.burger{
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    color: #fff;
+    float: right;
+    padding-top: 8px;
+    font-size: 18px;
+}
+
+
 @media only screen and (max-width:1024px){
     .for-mobile{
         display: block;
@@ -412,6 +528,46 @@ footer::after{
     section{
         padding-left: 20px;
         padding-right: 20px;
+    }
+
+    header{
+        height: 60px;
+        padding: 10px 20px;
+    }
+    a.logo{
+        height: 40px;
+    }
+    a.logo img{
+        height: 40px;
+    }
+    .main-menu{
+        position: fixed;
+        top: 60px;
+        left: 100%;
+        width: 70%;
+        height: calc(100vh - 60px);
+        background: var(--green3);
+        padding: 20px;
+        border-top: 1px solid rgba(255,255,255,0.3);
+        transition: all 0.3s ease-out;
+        -moz-transition: all 0.3s ease-out;
+        -webkit-transition: all 0.3s ease-out;
+    }
+    .main-menu.show{
+        left: 40%;
+    }
+    .main-menu a{
+        font-size: 14px;
+        margin-left: 0;
+        padding: 15px 0;
+        width: 100%;
+    }
+    .main-menu a.btn{
+        text-align: center;
+        position: absolute;
+        bottom: 60px;
+        left: 30px;
+        width: calc(100% - 60px);
     }
 
     .hero{

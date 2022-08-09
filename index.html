@@ -25,12 +25,13 @@
                         <a href="#" class="logo"><img src="asset/images/logo-veeam.png" alt=""></a>
                         <a href="#" class="logo"><img src="asset/images/logo-multipolar.png" alt=""></a>
                         <div class="main-menu">
-                            <a href="#" class="active">Home</a>
-                            <a href="#">About</a>
-                            <a href="#">Package</a>
-                            <a href="#">Contact Us</a>
-                            <a href="#" class="btn btn-primary">Consult Now!</a>
+                            <a href="#home" class="active">Home</a>
+                            <a href="#about">About</a>
+                            <a href="#package">Package</a>
+                            <a href="#footer">Contact Us</a>
+                            <a href="#reg-form" class="btn btn-primary pop-link">Consult Now!</a>
                         </div>
+                        <div class="burger for-mobile"><i class="fa fa-bars"></i></div>
                     </div>
                 </div>
             </div>
@@ -212,7 +213,7 @@
             </div>
         </section>
 
-        <footer>
+        <footer id="footer">
             <div class="container">
                 <div class="columns">
                     <div class="column is-2">
@@ -251,6 +252,42 @@
                 </div>
             </div>
         </footer>
+
+        <div id="reg-form" class="overlay">
+            <div class="popup">
+                <div class="pic">
+                    <img src="asset/images/form-img.jpg" alt="">
+                </div>
+                <form action="">
+                    <h3>Register</h3>
+
+                    <div class="inp-group">
+                        <label for="">Nama</label>
+                        <input type="text" placeholder="Nama Anda">
+                    </div>
+                    <div class="inp-group">
+                        <label for="">Email Kantor</label>
+                        <input type="email" placeholder="Email Kantor Anda">
+                    </div>
+                    <div class="inp-group">
+                        <label for="">No.Handphone</label>
+                        <input type="text" placeholder="example: +62 915 xxx xxx">
+                    </div>
+                    <div class="inp-group">
+                        <label for="">Nama Perusahaan</label>
+                        <input type="text" placeholder="Nama Perusahaan Anda">
+                    </div>
+                    <div class="inp-group">
+                        <label for="">Jabatan</label>
+                        <input type="text" placeholder="Jabatan Anda">
+                    </div>
+                    <div class="inp-group has-text-centered">
+                        <button class="btn btn-primary">CONSULT NOW!</button>
+                    </div>
+                </form>
+                <div class="close-bt"><img src="asset/images/times.png" alt=""></div>
+            </div>
+        </div>
 
     </div>
 
