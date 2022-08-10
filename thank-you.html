@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="asset/css/normalize.css">
+    <link rel="stylesheet" href="asset/css/bulma.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="asset/css/fontawesome-all.css">
+    <link rel="stylesheet" href="asset/css/owl.carousel.css">
+    <link rel="stylesheet" href="asset/css/main.css">
+</head>
+<body>
+    
+
+    <div class="master">
+        <header>
+            <div class="container">
+                <div class="columns">
+                    <div class="column is-12">
+                        <a href="#" class="logo"><img src="asset/images/logo-veeam.png" alt=""></a>
+                        <a href="#" class="logo"><img src="asset/images/logo-multipolar.png" alt=""></a>
+                        <div class="main-menu">
+                            <a href="#home" class="active">Home</a>
+                            <a href="#about">About</a>
+                            <a href="#package">Package</a>
+                            <a href="#footer">Contact Us</a>
+                            <a href="#reg-form" class="btn btn-primary pop-link">Consult Now!</a>
+                        </div>
+                        <div class="burger for-mobile"><i class="fa fa-bars"></i></div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <section class="thanks">
+            <div class="container">
+                <div class="columns is-centered">
+                    <div class="column is-7 has-text-centered">
+                        <div class="section-title has-text-white">
+                            <h3 class="mb-5">Terima Kasih</h3>
+                            <p>Anda telah terdaftar di database kami. Tim marketing kami akan segera meghubungi anda</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="columns is-centered">
+                    <div class="column is-6 has-text-centered">
+                        <a href="index.html" class="btn btn-primary">Kembali</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer id="footer">
+            <div class="container">
+                <div class="columns">
+                    <div class="column is-2">
+                        <a href="#" class="foot-logo"><img src="asset/images/foot-logo.png" alt=""></a>
+                        <div class="social-bt">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-spotify"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-whatsapp"></i></a>
+                            <a href="#"><i class="fa fa-envelope"></i></a>
+                        </div>
+                    </div>
+                    <div class="column is-1">
+                        <div class="spacer"></div>
+                    </div>
+                    <div class="column is-3">
+                        <h5>Hubungi Kami</h5>
+                        <p>
+                            <i class="fa fa-map-marker-alt"></i> Boulevard Gajah Mada No. 2025 <br>
+                            Lippo Cyber Park, Lippo Village <br>
+                            Tangerang 15811, Indonesia
+                        </p>
+                        <p><i class="fa fa-phone"></i> (+6221) 5460011, (+6221) 55 777 000</p>
+                        <p><i class="fa fa-envelope"></i> telemarketing@multipolar.com</p>
+                        <p><i class="fa fa-fax"></i> telemarketing@multipolar.com</p>
+                    </div>
+                    <div class="column is-6">
+                        <div class="corner-logo">
+                            <span>Didukung Oleh:</span>
+                            <img src="asset/images/logo-blue-power.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <div id="reg-form" class="overlay">
+            <div class="popup">
+                <div class="pic">
+                    <img src="asset/images/form-img.jpg" alt="">
+                </div>
+                <form action="">
+                    <h3>Register</h3>
+
+                    <div class="inp-group">
+                        <label for="">Nama</label>
+                        <input type="text" placeholder="Nama Anda">
+                    </div>
+                    <div class="inp-group">
+                        <label for="">Email Kantor</label>
+                        <input type="email" placeholder="Email Kantor Anda">
+                    </div>
+                    <div class="inp-group">
+                        <label for="">No.Handphone</label>
+                        <input type="text" placeholder="example: +62 915 xxx xxx">
+                    </div>
+                    <div class="inp-group">
+                        <label for="">Nama Perusahaan</label>
+                        <input type="text" placeholder="Nama Perusahaan Anda">
+                    </div>
+                    <div class="inp-group">
+                        <label for="">Jabatan</label>
+                        <input type="text" placeholder="Jabatan Anda">
+                    </div>
+                    <div class="inp-group has-text-centered">
+                        <button class="btn btn-primary">CONSULT NOW!</button>
+                    </div>
+                </form>
+                <div class="close-bt"><img src="asset/images/times.png" alt=""></div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="asset/js/jquery-1.11.0.min.js"></script>
+    <script src="asset/js/owl.carousel.min.js"></script>
+    <script src="asset/js/main.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".hero-slider").owlCarousel({
+                singleItem: true,
+                navigation: true,
+                pagination: true
+            });
+
+            $(".package-slider").owlCarousel({
+                items: 3,
+                navigation: false,
+                pagination: true,
+                autoPlay: true
+            });
+        });
+    </script>
+</body>
+</html>

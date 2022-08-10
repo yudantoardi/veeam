@@ -76,6 +76,9 @@ figure img{
     border-radius: 30px;
     -moz-border-radius: 30px;
     -webkit-border-radius: 30px;
+    transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -webkit-transition: all 0.3s ease-out;
 }
 .btn:hover{
     cursor: pointer;
@@ -84,6 +87,10 @@ figure img{
     background: var(--green);
     color: var(--green3);
     border: none;
+}
+.btn-primary:hover{
+    background: var(--green2);
+    color: #fff !important;
 }
 .btn-secondary{
     background: none;
@@ -130,6 +137,9 @@ header.scrolled::before{
     font-size: 16px;
     font-weight: 600;
     color: #fff;
+    transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -webkit-transition: all 0.3s ease-out;
 }
 .main-menu a.active,
 .main-menu a:hover{
@@ -515,6 +525,12 @@ footer::after{
     float: right;
     padding-top: 8px;
     font-size: 18px;
+}
+
+.thanks{
+    padding-top: 200px;
+    background: var(--green3);
+    min-height: 80vh;
 }
 
 
